@@ -5,6 +5,7 @@
     import Footer from "$lib/components/Footer.svelte";
     import aboutTeamImage from "$lib/images/main.jpg"; // You'll need to add this image to your project
     import person from "$lib/images/person.jpg"; 
+    import bg from "$lib/images/Media.jpeg"; 
 
 
     let visible = false;
@@ -51,13 +52,18 @@
   <main id="about-page-section" class="pt-8">
     <!-- Page Title Banner with increased padding -->
     <div class="relative bg-slate-800 py-24 md:py-32">
-      <div class="absolute inset-0 z-0 opacity-20">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <div class="absolute inset-0 z-0 opacity-90">
+        <!-- <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <pattern id="pattern-circles" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
             <circle cx="20" cy="20" r="3" fill="white" />
           </pattern>
           <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)" />
-        </svg>
+        </svg> -->
+        <img
+          src={bg}
+          alt="Decorative background"
+          class="absolute inset-0 h-full w-full object-cover opacity-40"
+        />
       </div>
       
       <div class="container relative z-10 mx-auto px-6 text-center md:px-12">

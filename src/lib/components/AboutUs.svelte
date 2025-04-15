@@ -3,6 +3,9 @@
   import { onMount } from 'svelte';
   import { fade, fly } from 'svelte/transition';
   import img from "$lib/images/img.jpg";
+  import { goto } from '$app/navigation';
+
+  
   let visible = false;
   
   // Add a variable to control the vertical position of the "About Us" text
@@ -76,7 +79,10 @@
             </p>
             
             <div in:fade={{ duration: 800, delay: 800 }} class="mt-8">
-              <button class="group relative inline-flex items-center overflow-hidden rounded-full border-2 border-slate-800 bg-transparent px-6 py-3 font-medium text-slate-800 transition duration-300 hover:bg-slate-800 hover:text-white">
+              <button 
+              class="group relative inline-flex items-center overflow-hidden rounded-full border-2 border-slate-800 bg-transparent px-6 py-3 font-medium text-slate-800 transition duration-300 hover:bg-slate-800 hover:text-white"
+              on:click={() => goto('/about')}
+            >
                 <span>Read More About Our Story</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />

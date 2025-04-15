@@ -5,7 +5,8 @@
     import img from "$lib/images/img3.jpg"; 
     import bg from "$lib/images/bg.jpg";
     import insta from "$lib/images/insta.png";
-
+    import { goto } from '$app/navigation';
+    
     let visible = false;
     
     onMount(() => {
@@ -66,7 +67,7 @@
             </div>
             
             <div in:fade={{ duration: 800, delay: 700 }}>
-              <button class="bg-red-300 bg-opacity-60 px-8 py-3 font-medium uppercase tracking-wider text-white transition duration-300 hover:bg-opacity-80">
+              <button class="bg-red-300 bg-opacity-60 px-8 py-3 font-medium uppercase tracking-wider text-white transition duration-300 hover:bg-opacity-80" on:click={() => goto('/gallery')}>
                 See Gallery
               </button>
             </div>
